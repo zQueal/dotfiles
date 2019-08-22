@@ -45,5 +45,5 @@ al-info
 
 export VIMRC=$HOME/.vimrc
 export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.cargo/bin
 source ~/.alias
