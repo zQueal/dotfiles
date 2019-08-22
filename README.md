@@ -1,10 +1,6 @@
-# hosted dotfiles
+# Dotfiles
 
-These are the dotfiles that I use for ArchLabs.
-
-Changes are tracked with Git, and hosted here.
-
-Everything else is managed with GNU Stow.
+These are the dotfiles that I use for ArchLabs. Changes are tracked with Git, and hosted here. Everything else is managed with GNU Stow.
 
 # How
 
