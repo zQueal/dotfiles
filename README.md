@@ -7,7 +7,7 @@ These are the dotfiles that I use for ArchLabs. Changes are tracked with Git, an
 1. Install `stow`
 2. Create `~/.dotfiles`
 3. Create folders inside `~/.dotfiles` for each dotfile group, git, vim, zsh, etc
-4. Move those dotfiles to the appropriate folders within `~/.dotfiles`
+4. **Move** (do not copy) those dotfiles to the appropriate folders within `~/.dotfiles`
 5. Run stow; `stow vim`
 6. Stow creates all the syslinks for you
 7. Profit?
