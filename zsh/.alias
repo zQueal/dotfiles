@@ -18,8 +18,7 @@ alias installed='comm -23 <(pacman -Qqett | sort | uniq) <(pacman -Qqg base -g b
 alias audio='youtube-dl -x --audio-format mp3 --audio-quality 0 $@'
 alias music='orchid'
 alias please='sudo $(fc -ln -1)'
-alias record='asciinema'
-alias dotfile='chezmoi'
+alias lg='lazygit'
 
 alias ..='cd ..'
 alias ...='cd ../..'
