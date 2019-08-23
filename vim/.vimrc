@@ -125,6 +125,7 @@ nnoremap K <PageUp>
 nnoremap <C-J> :join<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+vnoremap <Leader>ix :w !curl -F "f:1=<-" ix.io<CR>
 
 " fix copy and paste
 noremap y "+y
