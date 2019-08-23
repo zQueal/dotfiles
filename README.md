@@ -14,7 +14,10 @@ These are the dotfiles that I use for ArchLabs. Changes are tracked with Git, an
 
 # How to Use
 
-1. Clone this repo to `~/.dotfiles`
+1. Clone this repo
+
+> git clone https://github.com/zQueal/dotfiles ~/.dotfiles
+
 2. Install `stow`
 3. Run `stow vim` to symlink all files in `~/.dotfiles/vim` to `~`
 4. Profit?
