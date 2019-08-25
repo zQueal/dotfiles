@@ -44,7 +44,7 @@ set backspace=2                             " make backspace work like most othe
 set mouse=a                                 " enable mouse support
 
 " searching
-set incsearch                                " highlight search matches
+set incsearch                               " highlight search matches
 set ignorecase                              " set case insensitive searching
 set smartcase                               " case sensitive searching when not all lowercase
 
