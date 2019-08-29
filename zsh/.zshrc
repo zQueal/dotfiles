@@ -5,9 +5,15 @@
 
 # set some defaults
 HISTFILE=~/.zhistory
-setopt hist_ignore_dups
-setopt auto_menu
-unsetopt banghist
+setopt BANG_HIST
+setopt SHARE_HISTORY
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt AUTO_MENU
+setopt AUTO_CD
+unsetopt EXTENDED_HISTORY
+unsetopt BANGHIST
 export MANWIDTH=90
 export HISTSIZE=10000
 export SAVEHIST=10000
