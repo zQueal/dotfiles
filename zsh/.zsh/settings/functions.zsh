@@ -11,6 +11,11 @@ ls()
     command ls --color=auto -F "$@"
 }
 
+ll()
+{
+    command ls --color=auto -a "$@"
+}
+
 unalias cd >/dev/null 2>&1
 cd()
 {
@@ -112,19 +117,6 @@ surfs()
             surf-open "$url" &
         done
     ) & disown
-}
-
-ranger()
-{
-    local dir tmpf
-    [[ $RANGER_LEVEL && $RANGER_LEVEL -gt 2 ]] && exit 0
-    local rcmd="command ranger"
-    [[ $TERM == 'linux' ]] && rcmd="command ranger --cmd='set colorscheme default'"
-    tmpf="$(mktemp -t tmp.XXXXXX)"
-    eval "$rcmd --choosedir='$tmpf' '${*:-$(pwd)}'"
-    [[ -f $tmpf ]] && dir="$(cat "$tmpf")"
-    [[ -e $tmpf ]] && rm -f "$tmpf"
-    [[ -z $dir || $dir == "$PWD" ]] || builtin cd "${dir}" || return 0
 }
 
 flac_to_mp3()
