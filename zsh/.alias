@@ -40,3 +40,7 @@ alias 9='cd -9'
 clone () {
   git clone "gh:$1"
 }
+
+mp3 () {
+  for f in *.m4a; do ffmpeg -i "$f" -codec:a libmp3lame -q:a 2 "${f%.m4a}.mp3"; done
+}
