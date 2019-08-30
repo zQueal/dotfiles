@@ -10,7 +10,7 @@ ls()
 {
     command ls --color=auto -F "$@"
 }
-
+unalias ll >/dev/null 2>&1
 ll()
 {
     command ls --color=auto -a "$@"
@@ -21,7 +21,7 @@ cd()
 {
     builtin cd "$@" && command ls --color=auto -F
 }
-
+unalias f >/dev/null 2>&1
 f()
 {
     hash nnn >/dev/null 2>&1 || return 1
