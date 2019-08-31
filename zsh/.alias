@@ -19,6 +19,7 @@ alias audio='youtube-dl -x --audio-format mp3 --audio-quality 0 $@'
 alias music='orchid'
 alias please='sudo $(fc -ln -1)'
 alias lg='lazygit'
+alias pkgtop='sudo pkgtop'
 
 alias ..='cd ..'
 alias ...='cd ../..'
