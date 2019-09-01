@@ -3,5 +3,7 @@ pulse/
 xfce4/
 gtk-3.0/
 gsimplecal/
+golden-ratio/
+nnn.vim/
+vim-devicons/
 
-vim/.vim/plugged/vim-devicons/
