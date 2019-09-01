@@ -20,6 +20,7 @@ alias music='orchid'
 alias please='sudo $(fc -ln -1)'
 alias lg='lazygit'
 alias pkgtop='sudo pkgtop'
+alias wifi='nmcli dev wifi'
 
 alias ..='cd ..'
 alias ...='cd ../..'
