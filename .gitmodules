@@ -1,0 +1,8 @@
+[submodule "golden-ratio"]
+  path = vim/.vim/plugged/golden-ratio
+  ignore = dirty
+
+[submodule "nnn.vim"]
+  path = vim/.vim/plugged/nnn.vim
+  ignore = dirty
+
