@@ -15,14 +15,14 @@ alias dh='dirs -v'
 alias du='du -kh'
 alias df='df -kTh'
 
-if hash nvim >/dev/null 2>&1; then
-    alias vim='nvim'
-    alias v='nvim'
-    alias sv='sudo nvim'
-else
-    alias v='vim'
-    alias sv='sudo vim'
-fi
+# if hash nvim >/dev/null 2>&1; then
+#     alias vim='nvim'
+#     alias v='nvim'
+#     alias sv='sudo nvim'
+# else
+#     alias v='vim'
+#     alias sv='sudo vim'
+# fi
 
 alias gp='git pull'
 alias gf='git fetch'
