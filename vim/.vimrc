@@ -76,7 +76,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'ryanoasis/vim-devicons'
   Plug 'terryma/vim-multiple-cursors'
-  Plug 'ollykel/v-vim'
 call plug#end()
 
 " gruvbox
