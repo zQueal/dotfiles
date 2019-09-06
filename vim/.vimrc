@@ -76,6 +76,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'ryanoasis/vim-devicons'
   Plug 'terryma/vim-multiple-cursors'
+  Plug 'ollykel/v-vim'
 call plug#end()
 
 " gruvbox
@@ -160,6 +161,14 @@ augroup StartupGroup
   autocmd VimEnter * set autochdir
   autocmd ColorScheme * highlight Comment cterm=italic
 augroup END
+
+" Macro for Visual Range
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
 
 " Paste from register
 function! Reg()
