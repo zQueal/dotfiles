@@ -21,6 +21,7 @@ alias please='sudo $(fc -ln -1)'
 alias lg='lazygit'
 alias pkgtop='sudo pkgtop'
 alias wifi='nmcli dev wifi'
+alias wget='wget2'
 
 alias ..='cd ..'
 alias ...='cd ../..'
