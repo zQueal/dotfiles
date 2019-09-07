@@ -4,3 +4,5 @@ xfce4/
 gtk-3.0/
 gsimplecal/
 vim-devicons/
+
+config/.config/libfm/libfm.conf
