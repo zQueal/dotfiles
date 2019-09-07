@@ -5,18 +5,19 @@ These are the dotfiles that I use for ArchLabs. Changes are tracked with Git, an
 # How I Did This
 
 1. Install `stow` 
-2. `git init`
 2. Create `~/.dotfiles`
-3. Create folders inside `~/.dotfiles` for each dotfile group, git, vim, zsh, etc
-4. **Move** (do not copy) those dotfiles to the appropriate folders within `~/.dotfiles`
-5. Run stow; `stow vim`
-6. Stow creates all the syslinks for you
-7. Profit?
+3. `git init`
+4. Create folders inside `~/.dotfiles` for each dotfile group, git, vim, zsh, etc
+5. **Move** (do not copy--yes, this breaks most things for like 15 seconds) your current dotfiles to the appropriate folders within `~/.dotfiles`
+6. Run stow; `stow vim`
+7. Stow creates all the syslinks for you
+8. Setup your repository where you want it
+9. Profit?
 
 # How to Use
 
 1. Install `stow`
-2. Clone this repo;
+2. Clone this/your repo;
 
     > git clone https://github.com/zQueal/dotfiles ~/.dotfiles
     
