@@ -9,5 +9,17 @@ printf '%s' "\
 #
 # $1${2:+ - $2}
 
+help() {
+cat <<"HELP"
+Usage: $1 [ARGS]
+HELP
+exit 1
+}
+
+if [[ -z "'$1'" ]]; then
+  help
+elif [[ -n "'$1'" ]]; then
+  exit 0
+fi
 
 " > "$1" && chmod +x "$1"

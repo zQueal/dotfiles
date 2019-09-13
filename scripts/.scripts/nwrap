@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 #
-# main config for launching `nnn`
-
-# If you use pywal, you need to restore the scheme here
-# (cat ~/.cache/wal/sequences &)
+# nwrap - main config for launching `nnn`
 
 export NNN_BMS=""
 export NNN_USE_EDITOR=1
