@@ -159,6 +159,9 @@ augroup StartupGroup
   autocmd VimEnter * set rnu
   autocmd VimEnter * set autochdir
   autocmd ColorScheme * highlight Comment cterm=italic
+  autocmd InsertEnter * let updaterestore=&updatetime | set updatetime=4000
+  autocmd InsertLeave * let &updatetime=updaterestore
+  autocmd CursorHoldI * stopinsert
 augroup END
 
 " Macro for Visual Range
