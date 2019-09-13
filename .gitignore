@@ -6,3 +6,4 @@ gsimplecal/
 vim-devicons/
 
 config/.config/libfm/libfm.conf
+config/.config/transmission-remote-gtk/config.json
