@@ -7,6 +7,7 @@
 
 export NNN_BMS=""
 export NNN_USE_EDITOR=1
+export NNN_OPENER="vim"
 export LC_COLLATE="C"
 alias ncp="cat ${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection | tr '\0' '\n'"
 
