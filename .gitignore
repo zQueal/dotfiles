@@ -9,3 +9,4 @@ config/.config/libfm/libfm.conf
 config/.config/transmission-remote-gtk/config.json
 config/.config/nnn/.history
 config/.config/jesseduffield/lazygit/state.yml
+scripts/.scripts/test
