@@ -55,4 +55,3 @@ export PATH=$PATH:$GOPATH/bin:$HOME/.cargo/bin
 source ~/.alias
 
 export EDITOR=vim
-export NNN_USER_EDITOR=1
