@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# nnnfm - script to use nnn as file manager
+
+urxvt -e "nwrap $@"
