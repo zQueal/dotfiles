@@ -1,15 +1,13 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #
 # main config for launching `nnn`
 
 # If you use pywal, you need to restore the scheme here
 # (cat ~/.cache/wal/sequences &)
 
-export NNN_BMS="" # bookmarks
-export NNN_USER_EDITOR=1 # use vim
-export LC_COLLATE="C" # show dotfiles first
-# export NNN_CONTEXT_COLORS="5236"
+export NNN_BMS=""
+export NNN_USE_EDITOR=1
+export LC_COLLATE="C"
 alias ncp="cat ${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection | tr '\0' '\n'"
 
-## Start nnn with your preferred options
 nnn -SHd "$@"

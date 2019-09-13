@@ -16,9 +16,6 @@ super + Return
 super + f
     exo-open --launch FileManager
 
-super + n
-    urxvt -e "nwrap $@"
-
 # program launcher
 super + @space
     rofi_run -r
