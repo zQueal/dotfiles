@@ -19,7 +19,6 @@ alias audio='youtube-dl -x --audio-format mp3 --audio-quality 0 $@'
 alias music='orchid'
 alias please='sudo $(fc -ln -1)'
 alias lg='lazygit'
-alias pkgtop='sudo pkgtop'
 alias wifi='nmcli dev wifi'
 alias wget='wget2'
 alias scrot='screens'
@@ -42,7 +41,16 @@ alias 9='cd -9'
 # Functions
 
 clone () {
-  git clone "gh:$1"
+  if [ -n $1 ]; then
+    service=$1
+  fi
+  case $service in
+    "gh") git clone gh:$2;;
+    "gist") git clone gist:$2;;
+    "bb") git clone bb:$2;;
+    "aur") git clone aur:$2;;
+    *) echo "clone {gh, gist, bb, aur} repo/name";;
+  esac
 }
 
 mp3 () {
