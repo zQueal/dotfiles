@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 #
 # nwrap - main config for launching `nnn`
 
@@ -6,6 +6,8 @@ export NNN_BMS=""
 export NNN_USE_EDITOR=1
 export NNN_OPENER="vim"
 export LC_COLLATE="C"
+export NNN_OPS_PROG=1
+export NNN_SSHFS_OPTS="sshfs -o follow_symlinks"
 alias ncp="cat ${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection | tr '\0' '\n'"
 
 nnn -SHd "$@"
