@@ -23,6 +23,7 @@ alias wifi='nmcli dev wifi'
 alias wget='wget2'
 alias scrot='screens'
 alias nnn='nwrap'
+alias caddy='sudo caddy -conf .caddy -port 80 -root /var/www'
 
 alias ..='cd ..'
 alias ...='cd ../..'
