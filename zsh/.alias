@@ -22,6 +22,7 @@ alias lg='lazygit'
 alias wifi='nmcli dev wifi'
 alias wget='wget2'
 alias scrot='screens'
+alias nnn='nwrap'
 
 alias ..='cd ..'
 alias ...='cd ../..'
