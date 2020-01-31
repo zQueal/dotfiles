@@ -75,7 +75,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'roman/golden-ratio'
   Plug 'jeetsukumaran/vim-buffergator'
   Plug 'ryanoasis/vim-devicons'
-  Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 " gruvbox
