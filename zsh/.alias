@@ -21,7 +21,6 @@ alias please='sudo $(fc -ln -1)'
 alias lg='lazygit'
 alias wifi='nmcli dev wifi'
 alias wget='wget2'
-alias scrot='screens'
 alias nnn='nwrap'
 alias caddy='sudo caddy -conf /var/www/.caddy -port 80 -root /var/www'
 

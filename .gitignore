@@ -12,3 +12,4 @@ config/.config/jesseduffield/lazygit/state.yml
 scripts/.scripts/test
 config/.config/jesseduffield/lazygit/lazygit
 vim/.vim/autoload/plug.vim.old
+scripts/.scripts/wific
