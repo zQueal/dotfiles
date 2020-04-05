@@ -44,6 +44,7 @@ clone () {
     "gh") git clone gh:$2;;
     "gist") git clone gist:$2;;
     "bb") git clone bb:$2;;
+    "sl") git clone sl:$2
     "aur") git clone aur:$2;;
     *) echo "clone {gh, gist, bb, aur} repo/name";;
   esac
