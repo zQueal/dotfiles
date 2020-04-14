@@ -21,7 +21,6 @@ alias audio='youtube-dl -x --audio-format mp3 --audio-quality 0 $@'
 alias music='orchid'
 alias please='sudo $(fc -ln -1)'
 alias lg='lazygit'
-alias wifi='nmcli dev wifi'
 alias wget='wget2'
 alias nnn='nwrap'
 alias caddy='sudo caddy -conf /var/www/.caddy -port 80 -root /var/www'
@@ -40,7 +39,7 @@ alias 9='cd -9'
 # Functions
 
 clone () {
-  if [ -n $1 ]; then
+  if [[ -n $1 ]]; then
     service=$1
   fi
   case $service in
@@ -57,41 +56,6 @@ mp3 () {
   for f in *.m4a; do ffmpeg -i "$f" -codec:a libmp3lame -q:a 2 "${f%.m4a}.mp3"; done
 }
 
-extract() {
-    local c e i
-
-    (($#)) || return
-
-    for i; do
-        c=''
-        e=1
-
-        if [[ ! -r $i ]]; then
-            echo "$0: file is unreadable: \`$i'" >&2
-            continue
-        fi
-
-        case $i in
-            *.t@(gz|lz|xz|b@(2|z?(2))|a@(z|r?(.@(Z|bz?(2)|gz|lzma|xz)))))
-                   c=(bsdtar xvf);;
-            *.7z)  c=(7z x);;
-            *.Z)   c=(uncompress);;
-            *.bz2) c=(bunzip2);;
-            *.exe) c=(cabextract);;
-            *.gz)  c=(gunzip);;
-            *.rar) c=(unrar x);;
-            *.xz)  c=(unxz);;
-            *.zip) c=(unzip);;
-            *)     echo "$0: unrecognized file extension: \`$i'" >&2
-                   continue;;
-        esac
-
-        command "${c[@]}" "$i"
-        ((e = e || $?))
-    done
-    return "$e"
-}
-
 fuck(){
   curl cheat.sh/"$1"
 }
@@ -104,9 +68,8 @@ stonks(){
 }
 
 wific(){
-  if [[ "$1" != "" ]]; then
-    sudo nmcli d wifi connect $1 password $2
-    exit 0
+  if [[ -n "$1" ]] && [[ -n "$2" ]]; then
+    sudo nmcli d wifi connect "$1" password "$2"
   else
     sudo nmcli d wifi
   fi
