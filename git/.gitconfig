@@ -13,3 +13,6 @@
 
 [url "https://aur.archlinux.org/"]
   insteadOf = aur:
+
+[url "https://git.suckless.org/"]
+  insteadOf = sl:
