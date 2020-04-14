@@ -97,7 +97,10 @@ fuck(){
 }
 
 stonks(){
-  curl stonks.scd31.com/"$1"
+  local stocks=("VMFXX" "VIG" "VYM" "TRRNX")
+  for i in "${stocks[@]}"; do
+    curl stonks.scd31.com/"$i"
+  done
 }
 
 wific(){
@@ -107,4 +110,8 @@ wific(){
   else
     sudo nmcli d wifi
   fi
+}
+
+usb(){
+  udiskie -a
 }
