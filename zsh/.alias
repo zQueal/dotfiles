@@ -49,7 +49,7 @@ clone () {
     "bb") git clone bb:$2;;
     "sl") git clone sl:$2;;
     "aur") git clone aur:$2;;
-    *) echo "clone {gh, gist, bb, sl,  aur} repo/name";;
+    *) echo "clone {gh,gist,bb,sl,aur} repo/name";;
   esac
 }
 
@@ -93,9 +93,18 @@ extract() {
 }
 
 fuck(){
-  curl cheat.sh/"$@"
+  curl cheat.sh/"$1"
 }
 
 stonks(){
-  curl stonks.scd31.com/"$@"
+  curl stonks.scd31.com/"$1"
+}
+
+wific(){
+  if [[ "$1" != "" ]]; then
+    sudo nmcli d wifi connect $1 password $2
+    exit 0
+  else
+    sudo nmcli d wifi
+  fi
 }
