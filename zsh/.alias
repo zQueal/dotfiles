@@ -23,6 +23,7 @@ alias please='sudo $(fc -ln -1)'
 alias lg='lazygit'
 alias wget='wget2'
 alias nnn='nwrap'
+alias manga='mcomix'
 alias caddy='sudo caddy -conf /var/www/.caddy -port 80 -root /var/www'
 
 alias d='dirs -v | head -10'
