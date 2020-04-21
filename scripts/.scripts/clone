@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+#
+# clone - works with git options to make cloning easier
+
+help() {
+cat <<HELP
+Usage: clone [ARGS] [user]/[repo]
+
+Args:
+  --gh    - github
+  --gist  - github gists
+  --bb    - bitbucket
+  --sl    - suckless
+  --aur   - Arch AUR
+HELP
+exit 1
+}
+
+if [[ -z $1 ]]; then
+  help
+elif [[ -n $1 ]]; then
+  case $1 in
+    --gh) git clone gh:$2; exit 0;;
+    --gist) git clone gist:$2; exit 0;;
+    --bb) git clone bb:$2; exit 0;;
+    --sl) git clone sl:$2; exit 0;;
+    --aur) git clone aur:$2; exit 0;;
+    *) help;;
+  esac
+fi
+
