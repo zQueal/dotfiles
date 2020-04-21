@@ -19,7 +19,10 @@ exit 1
 if [[ -z "'$1'" ]]; then
   help
 elif [[ -n "'$1'" ]]; then
-  exit 0
+  case "'$1'" in
+    "'-1'" | "'--one'") command; exit 0;;
+    "'-2'" | "'--two'") command; exit 0;;
+  esac
 fi
 
-" > "$1" && chmod +x "$1"
+" > "$SCRIPTS/$1" && chmod +x "$SCRIPTS/$1"
