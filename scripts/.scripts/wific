@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# wific - nmcli wifi connection helper
+
+if [[ -z $1 ]]; then
+  sudo nmcli d wifi
+elif [[ -n $1 && -n $2 ]]; then
+  sudo nmcli d wifi connect "$1" password "$2"  
+fi
