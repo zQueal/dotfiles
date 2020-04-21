@@ -6,6 +6,7 @@ gsimplecal/
 vim-devicons/
 
 config/.config/libfm/libfm.conf
+config/.config/neomutt
 config/.config/transmission-remote-gtk/config.json
 config/.config/nnn/.history
 config/.config/jesseduffield/lazygit/state.yml
