@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# fuck - oh boy
+
+help() {
+cat <<HELP
+Usage: fuck [QUERY]
+HELP
+exit 1
+}
+
+if [[ -z $1 ]]; then
+  help
+elif [[ -n $1 ]]; then
+  case $1 in
+    --help | -h) help;;
+    *) curl cheat.sh/"$1";;
+  esac
+fi
+

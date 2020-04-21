@@ -5,6 +5,7 @@ alias pacr='sudo pacman -Rs'
 alias pacq='sudo pacman -Ss'
 alias pacqi='sudo pacman -Si'
 alias installed='sudo pacman -Qe'
+
 alias ls='exa -l'
 alias ll='exa -la'
 alias cat='bat --theme=gruvbox --color=always'
@@ -41,9 +42,9 @@ mp3 () {
   for f in *.m4a; do ffmpeg -i "$f" -codec:a libmp3lame -q:a 2 "${f%.m4a}.mp3"; done
 }
 
-fuck(){
-  curl cheat.sh/"$1"
-}
+# fuck(){
+#   curl cheat.sh/"$1"
+# }
 
 stonks(){
   local stocks=("VMFXX" "VIG" "VYM" "TRRNX")
