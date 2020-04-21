@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+#
+# gpu - optimus helper script
+
+help() {
+cat <<HELP
+Usage: gpu [arguments]
+
+Arguments:
+  -n, --nvidia    switch to nvidia only graphics
+  -i, --intel     switch to intel only graphics
+  --hybrid        switch to hybrid graphics
+  -p, --print     print current mode
+  -h, --help      show help
+$(optimus-manager --status)
+HELP
+exit 1
+}
+
+if [[ -z $1 ]]; then
+  help
+elif [[ -n $1 ]]; then
+  case $1 in
+    -n | --nvidia) optimus-manager --switch nvidia --no-confirm;;
+    -i | --intel) optimus-manager --switch intel --no-confirm;;
+    --hybrid) optimus-manager --switch hybrid --no-confirm;;
+    -p | --print) optimus-manager --print-startup;;
+    -h | --help) help;;
+  esac
+fi
+

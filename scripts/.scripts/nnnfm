@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-#
-# nnnfm - script to use nnn as a file manager
-
-if [[ -z $1 ]]; then
-  echo "We need arguments!"
-elif [[ -n $1 ]]; then
-  urxvt -e nwrap "$@"
-fi

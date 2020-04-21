@@ -10,7 +10,7 @@ printf '%s' "\
 # $1${2:+ - $2}
 
 help() {
-cat <<"HELP"
+cat <<HELP
 Usage: $1 [ARGS]
 HELP
 exit 1
@@ -22,6 +22,7 @@ elif [[ -n "'$1'" ]]; then
   case "'$1'" in
     "'-1'" | "'--one'") command; exit 0;;
     "'-2'" | "'--two'") command; exit 0;;
+    "'*'") help;;
   esac
 fi
 
