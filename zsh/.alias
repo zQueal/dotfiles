@@ -42,17 +42,6 @@ mp3 () {
   for f in *.m4a; do ffmpeg -i "$f" -codec:a libmp3lame -q:a 2 "${f%.m4a}.mp3"; done
 }
 
-# fuck(){
-#   curl cheat.sh/"$1"
-# }
-
-stonks(){
-  local stocks=("VMFXX" "VIG" "VYM" "TRRNX")
-  for i in "${stocks[@]}"; do
-    curl stonks.scd31.com/"$i"
-  done
-}
-
 wific(){
   if [[ -n "$1" ]] && [[ -n "$2" ]]; then
     sudo nmcli d wifi connect "$1" password "$2"

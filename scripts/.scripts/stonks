@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# stonks
+
+if [[ -z $1 ]]; then
+  stocks=("VMFXX" "VIG" "TRRNX")
+  for i in "${stocks[@]}"; do
+    curl stonks.scd31.com/"$i"
+  done
+elif [[ -n $1 ]]; then
+  curl stonks.scd31.com/"$1"
+fi
