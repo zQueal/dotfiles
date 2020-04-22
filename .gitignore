@@ -11,3 +11,5 @@ config/.config/nnn/.history
 config/.config/jesseduffield/lazygit/state.yml
 config/.config/jesseduffield/lazygit/lazygit
 vim/.vim/autoload/plug.vim.old
+
+vim/.vim/.netrwhist
