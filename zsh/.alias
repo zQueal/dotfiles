@@ -23,6 +23,7 @@ alias wget='wget2'
 alias manga='mcomix'
 alias caddy='sudo caddy -conf /var/www/.caddy -port 80 -root /var/www'
 alias drives='baobab'
+alias slides='sent'
 
 alias d='dirs -v | head -n 10'
 alias 1='cd -'
@@ -34,6 +35,8 @@ alias 6='cd -6'
 alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
+
+alias alpine='qemu-system-x86_64 -m 4096 -enable-kvm -nic user -hda ~/.vm/alpine.qcow2'
 
 # Functions
 
