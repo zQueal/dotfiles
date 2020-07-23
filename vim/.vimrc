@@ -5,7 +5,6 @@
 syntax on                                   " syntax highlighting
 filetype plugin indent on                   " recognise filetype and load plugins and indent files
 
-" mapleader
 let mapleader = "\<Space>"
 
 " interface
