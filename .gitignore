@@ -13,3 +13,4 @@ config/.config/jesseduffield/lazygit/lazygit
 vim/.vim/autoload/plug.vim.old
 
 vim/.vim/.netrwhist
+.netrc
