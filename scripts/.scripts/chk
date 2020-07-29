@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# chk - Verifies the installation status of programs
+
+chk() {
+  for i; do
+    command -v "$i" >/dev/null || >&2 echo "* $i"
+  done
+}
+printf 'Missing:\n'
+
+chk git lazygit exa bat fd vim fff sxiv hget wget jq mpv
