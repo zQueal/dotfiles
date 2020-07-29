@@ -55,4 +55,14 @@ export GOPATH=$HOME/.go
 export SCRIPTS=$HOME/.scripts
 export PATH=$PATH:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.scripts
 source ~/.alias
-export EDITOR=vim
+export EDITOR="vim"
+
+# fff settings
+
+f() {
+    fff "$@"
+    cd "$(\cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}
+
+export FFF_HIDDEN=1
+export FFF_FAV1=~/Downloads/
