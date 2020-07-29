@@ -68,7 +68,7 @@ set packpath=$HOME\\.vim\\
 " vim-plug
 call plug#begin('~/.vim/plugged')
   Plug 'terryma/vim-multiple-cursors'
-  Plug 'mcchrish/nnn.vim'
+  Plug 'dylanaraps/fff.vim'
   Plug 'tommcdo/vim-lion'
   Plug 'mbbill/undotree'
   Plug 'roman/golden-ratio'
@@ -81,11 +81,8 @@ colorscheme gruvbox
 let g:gruvbox_italic     = 1
 let g:gruvbox_termcolors = 256
 
-" nnn
-let g:nnn#set_default_mappings = 0
-let g:nnn#layout               = {'left': '~20%'}
-let g:nnn#action               = {'<S-l>': 'vsplit'}
-nnoremap <Leader>n :NnnPicker '%:p:h'<CR>
+" fff
+nnoremap f :F<CR>
 
 " vim-lion (easyalign)
 let g:lion_squeeze_spaces = 1
