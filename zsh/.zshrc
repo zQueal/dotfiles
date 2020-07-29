@@ -53,7 +53,7 @@ sudo -v
 export VIMRC=$HOME/.vimrc
 export GOPATH=$HOME/.go
 export SCRIPTS=$HOME/.scripts
-export PATH=$PATH:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.scripts
+export PATH=$PATH:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.scripts:$HOME/.local/bin
 source ~/.alias
 export EDITOR="vim"
 
@@ -65,4 +65,6 @@ f() {
 }
 
 export FFF_HIDDEN=1
-export FFF_FAV1=~/Downloads/
+export FFF_FAV1=~
+export FFF_FAV2=~/Downloads/
+export FFF_FAV3=~/.dotfiles/scripts/.scripts/
