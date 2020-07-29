@@ -2,8 +2,31 @@
 #
 # wific - nmcli wifi connection helper
 
+# if [[ -z $1 ]]; then
+#   sudo nmcli d wifi
+# elif [[ -n $1 && -n $2 ]]; then
+#   sudo nmcli d wifi connect "$1" password "$2"  
+# fi
+
+help() {
+cat <<HELP
+Usage: wific [NETWORK] [PASSWORD]
+
+  --scan | -s - scan for available networks
+  --help | -h - show help
+
+  Helper utility to connect to wifi networks.
+HELP
+exit 1
+}
+
 if [[ -z $1 ]]; then
-  sudo nmcli d wifi
-elif [[ -n $1 && -n $2 ]]; then
-  sudo nmcli d wifi connect "$1" password "$2"  
+  help
+elif [[ -n $1 ]]; then
+  case $1 in
+    --help | -h) help;;
+    --scan | -s) sudo nmcli d wifi;;
+    *) sudo nmcli d wifi connect "$1" password "$2";;
+  esac
 fi
+
