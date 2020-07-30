@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+# get - download from seedbox, semi-intelligently
+
+help() {
+cat <<HELP
+Usage: get [URL]
+HELP
+exit 1
+}
+
+if [[ -z $1 ]]; then
+  help
+elif [[ -n $1 ]]; then
+  hget "$(urldecode $1)"
+fi
