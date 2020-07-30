@@ -12,7 +12,7 @@ exit 1
 if [[ -z $1 ]]; then
   help
 elif [[ -n $1 ]]; then
-  subliminal download -l en "$1"
-  mpv "$1"
+  subliminal download -l en $1
+  mpv $1
 fi
 
