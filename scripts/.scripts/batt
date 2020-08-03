@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# batt - show current batt status
+
+bat_dir=/sys/class/power_supply/BAT0
+
+read -r capacity < "$bat_dir/capacity"
+read -r status < "$bat_dir/status"
+
+printf '%s%% [%s]\n' "$capacity" "$status"
