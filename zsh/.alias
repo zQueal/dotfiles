@@ -27,6 +27,9 @@ alias shot='shot -W -o /home/zqueal/Pictures/Screenshots/'
 alias torrents='tremc'
 alias size='du -h'
 
+# replace xz with fxz: github.com/conor42/fxz
+alias xz='fxz'
+
 # Advanced Copy / Move
 alias cp='cpg -g'
 alias mv='mvg -g'
