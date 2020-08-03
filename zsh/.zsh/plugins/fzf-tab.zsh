@@ -1,0 +1,1 @@
+/home/zqueal/.dotfiles/zsh/.zsh/plugins/fzf-tab/fzf-tab.zsh
