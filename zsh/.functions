@@ -1,0 +1,49 @@
+# rip *.m4a from youtube-dl to mp3
+mp3() {
+  for f in *.m4a; do ffmpeg -i "$f" -codec: a libmp3lame -q:a 2 "${f%.m4a}.mp3"; done
+}
+
+# removable media handling
+usb() {
+  udiskie -a
+}
+
+# weather
+wttr() {
+  local request="wttr.in/$1"
+    [ "$(tput cols)" -lt 125 ] && request+='?n'
+    curl -H "Accept-Language: ${LANG%_*}" --compressed "$request"
+}
+
+# simple bash calc
+calc() {
+  local result=""
+    result="$(printf "scale=10;%s\\n" "$*" | bc --mathlib | tr -d '\\\n')"
+    if [[ "$result" == *.* ]]; then
+      printf "%s" "$result" |
+        sed -e 's/^\./0./'  \
+        -e 's/^-\./-0./' \
+        -e 's/0*$//;s/\.$//'
+    else
+      printf "%s" "$result"
+        fi
+        printf "\\n"
+}
+
+# Create a git.io short URL
+gitio() {
+  if [ -z "${1}" ] || [ -z "${2}" ]; then
+    echo "Usage: \`gitio slug url\`"
+      return 1
+      fi
+      curl -i https://git.io/ -F "url=${2}" -F "code=${1}"
+}
+
+# `o` with no arguments opens the current directory, otherwise opens the given location
+o() {
+  if [ $# -eq 0 ]; then
+    xdg-open .  > /dev/null 2>&1
+  else
+    xdg-open "$@" > /dev/null 2>&1
+      fi
+}

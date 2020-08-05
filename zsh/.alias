@@ -27,6 +27,8 @@ alias shot='shot -W -o /home/zqueal/Pictures/Screenshots/'
 alias torrents='tremc'
 alias size='du -h'
 alias rm='trash'
+alias temp='sensors -f'
+alias wa='tungsten'
 
 # replace xz with fxz: github.com/conor42/fxz
 alias xz='fxz'
@@ -49,11 +51,6 @@ alias 9='cd -9'
 alias alpine='qemu-system-x86_64 -m 4096 -enable-kvm -nic user -hda ~/.vm/alpine.qcow2'
 
 # Functions
+#
 
-mp3 () {
-  for f in *.m4a; do ffmpeg -i "$f" -codec:a libmp3lame -q:a 2 "${f%.m4a}.mp3"; done
-}
-
-usb(){
-  udiskie -a
-}
+source ~/.functions
