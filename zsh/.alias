@@ -30,6 +30,10 @@ alias rm='trash'
 alias temp='sensors -f'
 alias wa='tungsten'
 
+# pbcopy / pbpaste using xsel
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
 # replace xz with fxz: github.com/conor42/fxz
 alias xz='fxz'
 
