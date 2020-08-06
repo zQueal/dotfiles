@@ -46,9 +46,11 @@ done
 # load the prompt last
 prompt simpl
 
+# paleta st-color scheme
+stcolor gruvbox-dark
+
 # system info and AL ascii art
 al-info
-sudo -v
 
 export VIMRC=$HOME/.vimrc
 export GOPATH=$HOME/.go
@@ -56,6 +58,7 @@ export SCRIPTS=$HOME/.scripts
 export PATH=$PATH:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.scripts:$HOME/.local/bin
 source ~/.alias
 export EDITOR="vim"
+
 
 # fff settings
 
