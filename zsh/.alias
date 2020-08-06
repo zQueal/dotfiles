@@ -26,9 +26,10 @@ alias slides='sent'
 alias shot='shot -W -o /home/zqueal/Pictures/Screenshots/'
 alias torrents='tremc'
 alias size='du -h'
-alias rm='trash'
 alias temp='sensors -f'
 alias wa='tungsten'
+alias orphans='pamac remove --orphans'
+alias vpn='ivpn connect -p wg -fastest'
 
 # pbcopy / pbpaste using xsel
 alias pbcopy='xsel --clipboard --input'
@@ -55,6 +56,5 @@ alias 9='cd -9'
 alias alpine='qemu-system-x86_64 -m 4096 -enable-kvm -nic user -hda ~/.vm/alpine.qcow2'
 
 # Functions
-#
 
 source ~/.functions
