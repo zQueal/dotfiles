@@ -8,7 +8,7 @@ alias installed='sudo pacman -Qe'
 
 alias ls='exa -l'
 alias ll='exa -la'
-alias cat='bat --theme=gruvbox --color=always'
+alias cat='bat'
 alias top='ytop -c monokai -f'
 alias htop='ytop -c monokai -f'
 alias vim.='vim $(fzf)'
