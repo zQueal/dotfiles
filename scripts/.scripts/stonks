@@ -3,7 +3,7 @@
 # stonks
 
 if [[ -z $1 ]]; then
-  stocks=("OIS" "TRRNX" "TSLA" "RRC")
+  stocks=("TAN" "QCLN" "DM" "TRRNX")
   for i in "${stocks[@]}"; do
     curl stonks.scd31.com/"$i"
   done
