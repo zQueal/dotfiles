@@ -2,11 +2,25 @@
 #
 # stonks
 
-if [[ -z $1 ]]; then
-  stocks=("TAN" "QCLN" "DM" "TRRNX")
-  for i in "${stocks[@]}"; do
-    curl stonks.scd31.com/"$i"
-  done
-elif [[ -n $1 ]]; then
-  curl stonks.scd31.com/"$1"
-fi
+function stock(){
+  if [[ -z "$@" ]];
+  then
+    echo "==== Portfolio ===="
+    curl stonks.scd31.com/AMC
+    curl stonks.scd31.com/NOK
+    curl stonks.scd31.com/TAN
+    curl stonks.scd31.com/QCLN
+    curl stonks.scd31.com/DM
+    curl stonks.scd31.com/TRRNX
+    echo "==== Crypto ===="
+    curl stonks.scd31.com/crypto/USD/NANO
+    curl stonks.scd31.com/crypto/USD/ETH
+    curl stonks.scd31.com/crypto/USD/BTC
+  else
+    curl stonks.scd31.com/"$@"
+  fi
+}
+
+for i in "$@"; do
+  stock "$i"
+done
