@@ -28,4 +28,3 @@ elif [[ -n $1 ]]; then
     *) help;;
   esac
 fi
-
